@@ -107,12 +107,15 @@ figure {
     z-index: 999999;
     pointer-events: none;
 }
+
 .center-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust the height as needed */
+    height: 100vh;
+    /* Adjust the height as needed */
 }
+
 .page-border .bottom-border,
 .page-border .left-border,
 .page-border .right-border,
@@ -128,6 +131,51 @@ figure {
 .page-border>.left-border {
     padding: 11px;
     background: #ccc;
+}
+
+/*Even better
+https://zipso.net/how-to-fix-list-item-indentation-in-wordpress/
+*/
+
+div#footer-address h4 {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+ul#footer-address {
+    list-style: none;
+    padding: 0;
+    margin-left: 25px;
+}
+
+ul#footer-address li {
+    padding-left: 1.3em;
+}
+
+ul#footer-address li:before {
+    font-family: FontAwesome;
+    color: orange;
+    display: inline-block;
+    margin-left: -1.3em;
+    /* same as padding-left set on li */
+    width: 1.3em;
+    /* same as padding-left set on li */
+}
+
+ul#footer-address li#map-icon:before {
+    content: "\f041";
+    color: red;
+}
+
+ul#footer-address li#phone-icon:before {
+    content: "\f095";
+    color: green;
+}
+
+ul#footer-address li#envelope-icon:before {
+    content: "\f0e0";
+    color: blue;
 }
 
 .page-border .bottom-border,
@@ -2228,13 +2276,15 @@ blockquote {
     background-color: rgba(0, 0, 0, 0.7);
     /* Black w/ opacity */
 }
-  /* Center the form */
-  .form-container {
+
+/* Center the form */
+.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 /* Modal content */
 .modal-content {
     background-color: #fefefe;
